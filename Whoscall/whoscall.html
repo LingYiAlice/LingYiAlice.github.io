@@ -4,9 +4,468 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whoscall 認證號碼 | 電話接通前，讓專業形象為你開場!</title>
+    <title>Whoscapy 認證號碼 | 電話接通前，讓專業形象為你開場!</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 960px;
+    margin: auto;
+}
+.header{
+    width: 960px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    position: fixed;
+    box-shadow:  0px 3px 0px 0px #ccc;
+    z-index: 1;
+}
+.header img{
+    width: 140px;
+    height: 40px;
+}
+.header .wrap{
+    padding: 10px;
+    margin-right: 100px;
+}
+.header a{
+    margin: 0px 2px;
+    color: #000;
+    font-weight: bold;
+}
+.header .wrap a:hover{
+    color: #00CC00;
+}
+a{
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: bold;
+}
+.fake-button{
+    background-color: #00CC00;
+    width: fit-content;
+    padding: 10px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+.header .fake-button,
+.advertise-content .fake-button{
+    color: #fff;
+}
+.fake-button:hover{
+    background-color: #0f0;
+}
+.advertise-content .pic_item img{
+    padding-top: 50px;
+    width: 100%;
+}
+.advertise-content .pic_item{
+    position: relative;
+}
+.advertise-content .picL{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+}
+.advertise-content .picR{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+}
+.advertise-content .wrap .item h1{
+    font-size: 50px;
+    color: #00CC00;
+    font-family:Arial;
+}
+.advertise-content .wrap .item_main p{
+    font-weight: bold;
+    font-size: 30px;
+}
+.advertise-content .wrap .item p{
+    color: #00CC00;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.advertise-content .wrap .item{
+    margin: 30px 0px;
+}
+.advertise-content .wrap{
+    position: absolute;
+    top: 150px;
+    left: 250px;    
+}
+.market-survey-content{
+    margin: 30px;
+}
+.market-survey-content p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.market-survey-content h2{
+    color: #00CC00;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+.market-survey-content #remark{
+    font-size: 15px;
+    text-align: center;
+    color: #888;
+}
+.market-survey-content .item{
+    display: flex;
+    margin: 30px 0px;
+}
+.market-survey-content .text{
+    width: 430px;    
+    margin: auto;
+    padding: 10px 10px;
+}
+.market-survey-content .text p
+{
+    font-size: 20px;
+    text-align:left;
+    margin: 15px 0px;
+}
+.market-survey-content span{
+    color: #00cc00;
+}
+.feature-content{
+    background-color: #F0F0F0;
+    padding: 60px 0px;
+    text-align: center;
+}
+h1{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.feature-content .list_pic,
+.feature-content .list_text{
+    display: flex;
+    justify-content:space-around;
+}
+.feature-content .item_pic img{
+    width: 50%;
+}
+.feature-content .list_text .item_text
+{
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
+}
+.feature-content .list_text .item_text h3
+{
+    font-size: 20px;
+}
+.experience-content{
+    margin: 50px 0px;
+    text-align: center;
+}
+.experience-content .list{
+    display: flex;
+    margin: 40px 0px;
+    text-align: left;
+}
+.experience-content .list .item{
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    padding: 20px;
+    margin: 10px;
+}
+.experience-content .list .item h3{
+    font-weight: bold;
+    font-size: 25px;
+}
+.experience-content .list .item p{
+    font-weight: bold;
+    color: #3C3C3C;
+    margin: 15px 0px;
+}
+.experience-content .list .item .pic_Quotation_marks{
+    transform: rotateY(180deg);
+}
+.experience-content .list .item .company_logo{
+    float: right;
+}
+.application-content{
+    background-color: #F0F0F0;
+    text-align: center;
+    padding: 30px;
+}
+.application-content p{
+    color: #00CC00;
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer{
+    background-color: rgb(39, 47, 55);
+    padding: 20px;
+}
+.footer .footer_wrap {
+    color: #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+.footer .footer_left a{
+    color: #888;
+    margin: 5px 0px;
+}
+.footer .footer_left a:hover{
+    color: #fff;
+}
+.footer .footer_wrap .footer_left {
+    display: flex;
+}
+.footer .footer_wrap .footer_left .left_item{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+.footer .footer_wrap .footer_right{
+    float: right;
+}
+.footer .footer_wrap .footer_right .social-media img{
+    width: 25px;
+    height: 25px;
+    margin: 10px 20px 15px 0px;
+}
+.footer .powered_by{
+    margin-bottom: 5px;
+}
+.footer .powered_by a{
+    color: #fff;
+    font-size: 10px;
+    font-weight:normal;
+}
+.footer .Gogolook a{
+    font-size: 25px;
+    color: #fff;
+}
+.footer .footer_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #fff;
+}
+.footer .footer_bottom .bottom_item{
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
+.footer .footer_bottom .bottom_item p,
+.footer .footer_bottom .bottom_item a{
+    font-size: 15px;
+    margin-right: 15px;
+    color: #888;
+}
+.footer .footer_bottom .bottom_text img{
+    width: 50%;
+    float: right;
+}
+    </style>
 </head>
 <body>
-    
+    <article class="container">
+    <!-- 固定在視窗 -->
+        <div class="header">
+            <a href="#">
+                <img src="./images/logo.svg" alt="Logo">
+            </a>
+            <div class="wrap">
+                <a href="#">Whoscall 進階版</a>
+                <a href="#">Whoscall 認證號碼</a>
+                <a href="#">認識 Whoscall</a>
+                <a href="#">Whoscall 專欄</a>
+                <a href="#">常見問題</a>
+            </div>       
+            <div>
+                <a class="fake-button" href="#">免費下載</a>
+            </div>         
+        </div>
+
+    <!-- 廣告 -->
+        <div class="advertise-content">
+            <div class="pic_item">
+                <img src="https://d3qzy1rn79qj7v.cloudfront.net/hero_images/valid-number-1440.jpg" alt="滿版圖">
+                <div class="picL">
+                    <img src="./images/Top左上.svg" alt="左上">
+                </div>
+                <div class="picR">
+                    <img src="./images/Top右下.svg" alt="右下">
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="item">
+                    <h1>whoscall 認證號碼</h1>
+                </div>
+                <div class="item_main">
+                    <p>電話接通前<br>讓專業形象為你開場！</p>
+                </div>
+                <div class="item">
+                    <a class="fake-button" href="#">立即申請</a>
+                    <p>企業方案優惠 $200/月 起</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- 市場調查 -->
+        <div class="market-survey-content">
+            <p>根據市場調查顯示 <br>超過<span>60%</span>的民眾會選擇忽視或 <br> 拒接陌生來電。</p>
+            <p id="remark">※Pollster 波仕特線上市調 (2014)</p>            
+            <div class="item">
+                <div class="text">
+                    <h2>提高2倍電話接聽意願</h2>
+                    <p>Whoscall 認證號碼讓您在全台百萬用戶的來電視窗，顯示公司名稱、姓名等資訊。從此不再是客戶的陌生來電！</p>
+                    <p id="remark">※Whoscall 調查 (2018)</p>
+                </div>
+                <div class="pic">
+                    <img src="./images/電話接聽意願.webp" alt="電話接聽意願">
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="./images/創造主動回撥.webp" alt="潛在客戶">
+                </div>
+                <div class="text">
+                    <h2>創造主動回撥的潛在客戶</h2>
+                    <p>在來電記錄中，留下最佳企業形象，創造客戶主動聯繫的契機。</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="text">
+                    <h2>眾多來電一秒看見</h2>
+                    <p>不在客戶的通訊錄裡，也能於通話紀錄顯示企業資訊，輕鬆提升工作效率與拓客成功率。</p>
+                </div>
+                <div class="pic">
+                    <img src="./images/眾多來電.webp" alt="眾多來電">
+                </div>
+            </div>
+        </div>
+
+    <!-- 3大特色 -->
+        <div class="feature-content">
+                <h1>拓展業務的最佳夥伴！</h1>
+                <div class="list_pic">
+                    <div class="item_pic">
+                        <img src="./images/實名認證.svg" alt="實名認證.svg">
+                    </div>
+                    <div class="item_pic">
+                        <img src="./images/支援手機雙系統.svg" alt="支援手機雙系統.svg">
+                    </div>
+                    <div class="item_pic">
+                        <img src="./images/一對一專人服務.svg" alt="一對一專人服務.svg">
+                    </div>
+                </div>
+                <div class="list_text">
+                    <div class="item_text">
+                        <h3>實名認證</h3>
+                        <p>Whoscall 嚴謹的實名審核，讓認證過的電話號碼更值得信任。</p>
+                    </div>
+                    <div class="item_text">
+                        <h3>支援手機雙系統</h3>
+                        <p>支援在 iOS 與 Android 系統上的來電顯示，全台潛在客戶一網打盡。</p>
+                    </div>
+                    <div class="item_text">
+                        <h3>一對一專人服務</h3>
+                        <p>專人服務、輕鬆申請認證流程不再複雜惱人</p>
+                    </div>
+                </div>
+        </div>
+
+    <!-- 用戶經驗 -->
+        <div class="experience-content">
+            <h1>用戶經驗分享</h1>
+            <div class="list">
+                <div class="item">
+                    <img class="pic_Quotation_marks" src="./images/用戶經驗分享.svg" alt="’’">
+                    <h3>沒想到更多客戶主動回電!</h3>
+                    <p>申請Whoscall認證號碼後，業務撥打出去的未接電話，客戶更樂意回電了，保險方案的介紹與推動也比以前更即時有效!</p>
+                    <img class="company_logo" src="./images/國泰人壽.png" alt="國泰人壽">
+                </div>
+                <div class="item">
+                    <img class="pic_Quotation_marks" src="./images/用戶經驗分享.svg" alt="’’">
+                    <h3>高接聽率讓合作更有效率!</h3>
+                    <p>設定Whoscall認證號碼後，電商客戶的接聽率明顯比以前高很多!和客戶討論案子的速度更順利、也更能即時給客戶完整的營運建議!</p>
+                    <img class="company_logo" src="./images/91APP.png" alt="91APP">
+                </div>
+                <div class="item">
+                    <img class="pic_Quotation_marks" src="./images/用戶經驗分享.svg" alt="’’">
+                    <h3>接聽意願提高，配送更快速!</h3>
+                    <p>透過Whoscall Number 服務，讓顧客接聽意願變高。也讓我們的物流司機更容易掌握顧客的狀況，網購商品能更即時且有效率的送達</p>
+                    <img class="company_logo" src="./images/PChome.png" alt="PChome.png">
+                </div>
+            </div>
+        </div>
+
+    <!-- 申請 -->
+        <div class="application-content">
+            <h1>馬上申請企業專屬認證號碼！</h1>
+            <p>每筆 $200/月 起，申辦號碼越多、優惠更多！</p>
+        </div>
+
+    <!-- 頁尾 -->
+        <div class="footer">
+            <div class="footer_wrap">
+                <div class="footer_left">
+                    <div class="left_item">
+                        <h4>Whoscall</h4>
+                        <a href="#">認識 Whoscall</a>
+                        <a href="#">Whoscall 進階版</a>
+                        <a href="#">Whoscall 專欄</a>
+                        <a href="#">Whoscall 認證號碼</a>
+                    </div>
+                    <div class="left_item">
+                        <h4>公司</h4>
+                        <a href="#">工作機會</a>
+                        <h4>媒體中心</h4>
+                        <a href="#">最新消息</a>
+                        <a href="#">品牌識別</a>
+                    </div>
+                    <div class="left_item">
+                        <h4>客戶服務</h4>
+                        <a href="#">安全性</a>
+                        <a href="#">常見問題</a>
+                        <a href="#">聯絡我們</a>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <h4>追蹤我們</h4>
+                    <div class="social-media">
+                        <a href="#"><img src="./images/IG.jpg" alt="IG"></a>
+                        <a href="#"><img src="./images/FB.jpg" alt="FB"></a>
+                        <a href="#"><img src="./images/Twitter.jpg" alt="Twitter"></a>
+                        <a href="#"><img src="./images/YT.jpg" alt="YT"></a>
+                    </div>
+                    <div class="powered_by">
+                        <a href="#">Powered by</a>
+                    </div>
+                    <div class="Gogolook">
+                        <a href="#">Gogolook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="bottom_item">
+                    <p>© 2022 Gogolook. All Rights Reserved.</p>
+                    <a href="#">服務條款</a>
+                    <a href="#">隱私權政策</a>
+                </div>
+                <div class="bottom_text">
+                    <a href="#"><img src="./images/language.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </article>
 </body>
 </html>
