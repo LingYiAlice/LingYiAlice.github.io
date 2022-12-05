@@ -19,25 +19,29 @@
     background-color: #fff;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px 0px;
     position: fixed;
     box-shadow:  0px 3px 0px 0px #ccc;
-    z-index: 1;
+    z-index: 1; 
+}
+.header .wrap{
+    display: flex;
 }
 .header img{
     width: 140px;
     height: 40px;
 }
-.header .wrap{
-    padding: 10px;
-    margin-right: 100px;
+.header .item{
+    display: flex;
+    align-items: center;
 }
 .header a{
     margin: 0px 2px;
     color: #000;
     font-weight: bold;
 }
-.header .wrap a:hover{
+.header a:hover{
     color: #00CC00;
 }
 a{
@@ -280,16 +284,18 @@ h1{
     <article class="container">
     <!-- 固定在視窗 -->
         <div class="header">
-            <a href="#">
-                <img src="./images/logo.svg" alt="Logo">
-            </a>
             <div class="wrap">
-                <a href="#">Whoscall 進階版</a>
-                <a href="#">Whoscall 認證號碼</a>
-                <a href="#">認識 Whoscall</a>
-                <a href="#">Whoscall 專欄</a>
-                <a href="#">常見問題</a>
-            </div>       
+                <a href="#">
+                    <img src="./images/logo.svg" alt="Logo">
+                </a>
+                <div class="item">
+                    <a href="#">Whoscall 進階版</a>
+                    <a href="#">Whoscall 認證號碼</a>
+                    <a href="#">認識 Whoscall</a>
+                    <a href="#">Whoscall 專欄</a>
+                    <a href="#">常見問題</a>
+                </div>
+            </div>      
             <div>
                 <a class="fake-button" href="#">免費下載</a>
             </div>         
