@@ -5,279 +5,283 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whoscapy 認證號碼 | 電話接通前，讓專業形象為你開場!</title>
+    <script src="https://kit.fontawesome.com/6ac2908115.js" crossorigin="anonymous"></script>
     <style>
         *{
-    margin: 0;
-    padding: 0;
-    }
-    .container{
-        width: 960px;
-        margin: auto;
-    }
-    .header{
-        width: 960px;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 0px;
-        position: fixed;
-        box-shadow:  0px 3px 0px 0px #ccc;
-        z-index: 1; 
-    }
-    .header .wrap{
-        display: flex;
-    }
-    .header img{
-        width: 140px;
-        height: 40px;
-    }
-    .header .item{
-        display: flex;
-        align-items: center;
-    }
-    .header a{
-        margin: 0px 2px;
-        color: #000;
-        font-weight: bold;
-    }
-    .header a:hover{
-        color: #00CC00;
-    }
-    a{
-        text-decoration: none;
-        transition: 0.5s;
-        font-weight: bold;
-    }
-    .fake-button{
-        background-color: #00CC00;
-        width: fit-content;
-        padding: 10px 30px;
-        font-size: 18px;
-        cursor: pointer;
-        border-radius: 100px;
-    }
-    .header .fake-button,
-    .advertise-content .fake-button{
-        color: #fff;
-    }
-    .fake-button:hover{
-        background-color: #0f0;
-    }
-    .advertise-content .pic_item img{
-        padding-top: 50px;
-        width: 100%;
-    }
-    .advertise-content .pic_item{
-        position: relative;
-    }
-    .advertise-content .picL{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20%;
-    }
-    .advertise-content .picR{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 25%;
-    }
-    .advertise-content .wrap .item h1{
-        font-size: 50px;
-        color: #00CC00;
-        font-family:Arial;
-    }
-    .advertise-content .wrap .item_main p{
-        font-weight: bold;
-        font-size: 30px;
-    }
-    .advertise-content .wrap .item p{
-        color: #00CC00;
-        font-size: 15px;
-        margin-top: 15px;
-        font-weight: bold;
-    }
-    .advertise-content .wrap .item{
-        margin: 30px 0px;
-    }
-    .advertise-content .wrap{
-        position: absolute;
-        top: 150px;
-        left: 250px;    
-    }
-    .market-survey-content{
-        margin: 30px;
-    }
-    .market-survey-content p{
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-    }
-    .market-survey-content h2{
-        color: #00CC00;
-        font-size: 35px;
-        font-weight: bold;
-        margin: 20px 0px;
-    }
-    .market-survey-content #remark{
-        font-size: 15px;
-        text-align: center;
-        color: #888;
-    }
-    .market-survey-content .item{
-        display: flex;
-        margin: 30px 0px;
-    }
-    .market-survey-content .text{
-        width: 430px;    
-        margin: auto;
-        padding: 10px 10px;
-    }
-    .market-survey-content .text p
-    {
-        font-size: 20px;
-        text-align:left;
-        margin: 15px 0px;
-    }
-    .market-survey-content span{
-        color: #00cc00;
-    }
-    .feature-content{
-        background-color: #F0F0F0;
-        padding: 60px 0px;
-        text-align: center;
-    }
-    h1{
-        font-size: 35px;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-    .feature-content .list_pic,
-    .feature-content .list_text{
-        display: flex;
-        justify-content:space-around;
-    }
-    .feature-content .item_pic img{
-        width: 50%;
-    }
-    .feature-content .list_text .item_text
-    {
-        width: 250px;
-        text-align: center;
-        font-weight: bold;
-    }
-    .feature-content .list_text .item_text h3
-    {
-        font-size: 20px;
-    }
-    .experience-content{
-        margin: 50px 0px;
-        text-align: center;
-    }
-    .experience-content .list{
-        display: flex;
-        margin: 40px 0px;
-        text-align: left;
-    }
-    .experience-content .list .item{
-        border: 1px solid #ccc;
-        box-shadow: 0px 0px 10px 0px #ccc;
-        padding: 20px;
-        margin: 10px;
-    }
-    .experience-content .list .item h3{
-        font-weight: bold;
-        font-size: 25px;
-    }
-    .experience-content .list .item p{
-        font-weight: bold;
-        color: #3C3C3C;
-        margin: 15px 0px;
-    }
-    .experience-content .list .item .pic_Quotation_marks{
-        transform: rotateY(180deg);
-    }
-    .experience-content .list .item .company_logo{
-        float: right;
-    }
-    .application-content{
-        background-color: #F0F0F0;
-        text-align: center;
-        padding: 30px;
-    }
-    .application-content p{
-        color: #00CC00;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .footer{
-        background-color: rgb(39, 47, 55);
-        padding: 20px;
-    }
-    .footer .footer_wrap {
-        color: #F0F0F0;
-        display: flex;
-        justify-content: space-between;
-        font-family: sans-serif;
-    }
-    .footer .footer_left a{
-        color: #888;
-        margin: 5px 0px;
-    }
-    .footer .footer_wrap .footer_left {
-        display: flex;
-    }
-    .footer .footer_wrap .footer_left .left_item{
-        display: flex;
-        flex-direction: column;
-        margin-right: 40px;
-    }
-    .footer .footer_wrap .footer_right{
-        float: right;
-    }
-    .footer .footer_wrap .footer_right .social-media img{
-        width: 25px;
-        height: 25px;
-        margin: 10px 20px 15px 0px;
-    }
-    .footer .powered_by{
-        margin-bottom: 5px;
-    }
-    .footer .powered_by a{
-        color: #fff;
-        font-size: 10px;
-        font-weight:normal;
-    }
-    .footer .Gogolook a{
-        font-size: 25px;
-        color: #fff;
-    }
-    .footer .footer_bottom{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid #fff;
-    }
-    .footer .footer_bottom .bottom_item{
-        display: flex;
-        text-align: center;
-        padding: 10px;
-    }
-    .footer .footer_bottom .bottom_item p,
-    .footer .footer_bottom .bottom_item a{
-        font-size: 15px;
-        margin-right: 15px;
-        color: #888;
-    }
-    .footer .footer_bottom .bottom_text img{
-        width: 50%;
-        float: right;
-    }
-    .footer .footer_left a:hover,
-    .footer .footer_bottom a:hover{
-        color: #fff;
-    }
+        margin: 0;
+        padding: 0;
+        }
+        .container{
+            width: 960px;
+            margin: auto;
+        }
+        .header{
+            width: 960px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0px;
+            position: fixed;
+            box-shadow:  0px 3px 0px 0px #ccc;
+            z-index: 1; 
+        }
+        .header .wrap{
+            display: flex;
+        }
+        .header img{
+            width: 140px;
+            height: 40px;
+        }
+        .header .item{
+            display: flex;
+            align-items: center;
+        }
+        .header a{
+            margin: 0px 2px;
+            color: #000;
+            font-weight: bold;
+        }
+        .header a:hover{
+            color: #00CC00;
+        }
+        a{
+            text-decoration: none;
+            transition: 0.5s;
+            font-weight: bold;
+        }
+        .fake-button{
+            background-color: #00CC00;
+            width: fit-content;
+            padding: 10px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+        .header .fake-button,
+        .advertise-content .fake-button{
+            color: #fff;
+        }
+        .fake-button:hover{
+            background-color: #0f0;
+        }
+        .advertise-content .pic_item img{
+            padding-top: 50px;
+            width: 100%;
+        }
+        .advertise-content .pic_item{
+            position: relative;
+        }
+        .advertise-content .picL{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+        }
+        .advertise-content .picR{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 25%;
+        }
+        .advertise-content .wrap .item h1{
+            font-size: 50px;
+            color: #00CC00;
+            font-family:Arial;
+        }
+        .advertise-content .wrap .item_main p{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .advertise-content .wrap .item p{
+            color: #00CC00;
+            font-size: 15px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .advertise-content .wrap .item{
+            margin: 30px 0px;
+        }
+        .advertise-content{
+            position: relative;
+        }
+        .advertise-content .wrap{
+            position: absolute;
+            top: 150px;
+            left: 100px;    
+        }
+        .market-survey-content{
+            margin: 30px;
+        }
+        .market-survey-content p{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .market-survey-content h2{
+            color: #00CC00;
+            font-size: 35px;
+            font-weight: bold;
+            margin: 20px 0px;
+        }
+        .market-survey-content #remark{
+            font-size: 15px;
+            text-align: center;
+            color: #888;
+        }
+        .market-survey-content .item{
+            display: flex;
+            margin: 30px 0px;
+        }
+        .market-survey-content .text{
+            width: 430px;    
+            margin: auto;
+            padding: 10px 10px;
+        }
+        .market-survey-content .text p
+        {
+            font-size: 20px;
+            text-align:left;
+            margin: 15px 0px;
+        }
+        .market-survey-content span{
+            color: #00cc00;
+        }
+        .feature-content{
+            background-color: #F0F0F0;
+            padding: 60px 0px;
+            text-align: center;
+        }
+        h1{
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .feature-content .list_pic,
+        .feature-content .list_text{
+            display: flex;
+            justify-content:space-around;
+        }
+        .feature-content .item_pic img{
+            width: 50%;
+        }
+        .feature-content .list_text .item_text
+        {
+            width: 250px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .feature-content .list_text .item_text h3
+        {
+            font-size: 20px;
+        }
+        .experience-content{
+            margin: 50px 0px;
+            text-align: center;
+        }
+        .experience-content .list{
+            display: flex;
+            margin: 40px 0px;
+            text-align: left;
+        }
+        .experience-content .list .item{
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px 0px #ccc;
+            padding: 20px;
+            margin: 10px;
+        }
+        .experience-content .list .item h3{
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .experience-content .list .item p{
+            font-weight: bold;
+            color: #3C3C3C;
+            margin: 15px 0px;
+        }
+        .experience-content .list .item .pic_Quotation_marks{
+            transform: rotateY(180deg);
+        }
+        .experience-content .list .item .company_logo{
+            float: right;
+        }
+        .application-content{
+            background-color: #F0F0F0;
+            text-align: center;
+            padding: 30px;
+        }
+        .application-content p{
+            color: #00CC00;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .footer{
+            background-color: rgb(39, 47, 55);
+            padding: 20px;
+        }
+        .footer .footer_wrap {
+            color: #F0F0F0;
+            display: flex;
+            justify-content: space-between;
+            font-family: sans-serif;
+        }
+        .footer .footer_left a{
+            color: #888;
+            margin: 5px 0px;
+        }
+        .footer .footer_wrap .footer_left {
+            display: flex;
+        }
+        .footer .footer_wrap .footer_left .left_item{
+            display: flex;
+            flex-direction: column;
+            margin-right: 40px;
+        }
+        .footer .footer_wrap .footer_right{
+            float: right;
+        }
+        .footer .footer_wrap .footer_right .social-media img{
+            width: 25px;
+            height: 25px;
+            margin: 10px 20px 15px 0px;
+        }
+        .footer .powered_by{
+            margin-bottom: 5px;
+        }
+        .footer .powered_by a{
+            color: #fff;
+            font-size: 10px;
+            font-weight:normal;
+        }
+        .footer .Gogolook a{
+            font-size: 25px;
+            color: #fff;
+        }
+        .footer .footer_bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #fff;
+        }
+        .footer .footer_bottom .bottom_item{
+            display: flex;
+            text-align: center;
+            padding: 10px;
+        }
+        .footer .footer_bottom .bottom_item p,
+        .footer .footer_bottom .bottom_item a{
+            font-size: 15px;
+            margin-right: 15px;
+            color: #888;
+        }
+        .footer .footer_bottom .bottom_text img{
+            width: 50%;
+            float: right;
+        }
+        .footer .footer_left a:hover,
+        .footer .footer_bottom a:hover{
+            color: #fff;
+        }
     </style>
 </head>
 <body>
