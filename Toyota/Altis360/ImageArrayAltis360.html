@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altis360</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        .kv{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        button{
+            font-size: 50px;
+            background-color: #fff;
+            border: 0;
+        }
+        img{
+            width: 70%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>360度賞車</h1>
+
+    <div class="kv">
+        <button class="left"><i class="fa-solid fa-rotate-right"></i></button>
+        <img class="pic" src="./360EXT_1_22_1.png" alt="">
+        <button class="right"><i class="fa-solid fa-rotate-left"></i></button>
+    </div>
+
+    <script>
+        const pic = document.querySelector(".pic");
+        const left = document.querySelector(".left");
+        const right = document.querySelector(".right");
+        let picNum = 1;
+
+        window.onload = function(){
+            
+            left.addEventListener('click',function(){
+                picNum++;
+            if( picNum == 60){
+                console.log('60')
+                picNum = 1;
+                pic.src = `./360EXT_1_22_${picNum}.png`;
+                
+            }
+            else{
+                console.log('++')
+                pic.src = `./360EXT_1_22_${picNum}.png`;
+            }
+            })
+            
+            right.addEventListener('click',function(){
+                picNum--;
+                if( picNum == 0){
+                    console.log('0')
+                    picNum = 60;
+                    pic.src = `./360EXT_1_22_${picNum}.png`;
+                }
+                else{
+                    console.log('--')
+                    pic.src = `./360EXT_1_22_${picNum}.png`;
+                }
+            })
+        }
+
+        
+    </script>
+
+</body>
+</html>
