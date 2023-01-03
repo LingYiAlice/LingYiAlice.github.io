@@ -22,7 +22,7 @@ window.onload = function() {
         alert(`答案是: ${password}`)
     })
     guess.addEventListener('click',function(){
-        if(isNaN(input.value) || input.value.length < 4){
+        if(isNaN(input.value) || input.value.length != 4){
             alert('請輸入不重複的四位數字');
             input.value = "";
         }
@@ -41,7 +41,6 @@ function getRandom() {
         if(!password.includes(num)){
             password += num;
         }
-    // console.log(`答案: ${password}`);
     }
     reset.disabled = false;
     answer.disabled = false;
@@ -55,31 +54,30 @@ function judge(){
     let gsArr =[];
     let A = 0;
     let B = 0; 
-    //密碼轉字元
-    for(let i = 0; psArr.length < 4; i++){
+    for(let i = 0; i < 4; i++){
+        //密碼轉字元
         console.log(password)
-        let num = password.charAt(i)
-        psArr.push(num)
+        let pnum = password.charAt(i)
+        psArr.push(pnum)
         console.log(psArr)
-    }
-    //猜數字轉字元
-    for(let i = 0; gsArr.length < 4; i++){
+        
+        //猜數字轉字元
         console.log('gsarr')
-        let num = input.value.charAt(i)
-        gsArr.push(num)
+        let gnum = input.value.charAt(i)
+        gsArr.push(gnum)
     }
-    console.log(psArr)
-    console.log(gsArr)
+    // console.log(psArr)
+    // console.log(gsArr)
 
     for(let i = 0; i < psArr.length; i++){
-        console.log(` ${psArr[i] } : ${gsArr[i]}`)
+        // console.log(` ${psArr[i] } : ${gsArr[i]}`)
         if(psArr[i] == gsArr[i]){
             A++;
-            console.log(`A : ${A}`)
+            // console.log(`A : ${A}`)
         }
         else if(psArr.includes(gsArr[i])){
             B++;
-            console.log(`B : ${B}`)
+            // console.log(`B : ${B}`)
         }
     }
 
