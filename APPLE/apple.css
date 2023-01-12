@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1,p{
+    font-family: SF Pro TC,SF Pro Display,SF Pro Icons,AOS Icons,PingFang TC,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+h2 span{
+    font-size: 20px;
+    color: #333;
+}
+img{
+    vertical-align: middle;
+    width: 100%;
+}
+/*  */
+header{
+    height: 40px;
+    text-align: center;
+    background-color: #333;
+    margin-bottom: 20px;
+}
+nav{
+    margin: auto;
+    line-height: 40px;
+}
+nav button{
+    border: transparent;
+    background-color: #333;
+    color: #ccc;
+    margin: 0 20px;
+}
+nav button:hover{
+    color: #fff;
+}
+/*  */
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.kv{
+    width: 90%;
+    margin: auto;
+    position: sticky;
+    top: 10px
+}
+
+.color > button{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: transparent;
+    outline: 2px solid #aaa;    
+}
+
+
+
+.format{
+    margin-top: 50px;
+}
+
+.format > button,
+.network > button{
+    margin: 15px 20px;
+    border: transparent;
+    border-radius: 10px;
+    outline: 2px solid #aaa;   
+    display: flex;
+    justify-content: space-between; 
+    background-color: #fff;
+}
+.format > button P,
+.network > button p{
+    margin-top: 10px;
+    padding: 10px 10px 0;
+    font-size: 18px;
+}
+.format > button P:last-child,
+.network > button P:last-child{
+    font-weight: lighter;
+}
+
+.scroll  button:hover{
+    outline: 2px solid #0071e3;
+}
+
+
+.total{
+    margin-top: 50px;
+}
+#show{
+    font-size: 30px;
+}
+
+@media screen and (width > 768px){
+    .kv img{
+        position: sticky;
+        top: 100px;
+    }
+}
