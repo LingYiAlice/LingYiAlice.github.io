@@ -1,0 +1,13 @@
+
+                            let li = document.createElement('li')
+                            li.innerText = item.title
+                            
+                            li.onclick = function(e) {
+                                editDateInput.value = `${year}-${month + 1}-${d}`
+                                editValueInput.value = item.title
+                                currentIndex = index
+                                bootstrap.Modal.getOrCreateInstance(editModal).show()
+                                e.stopPropagation()
+                            }
+                            
+                            ul.appendChild(li)

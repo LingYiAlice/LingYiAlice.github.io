@@ -1,0 +1,36 @@
+#eye{
+    width: 100vw;
+    height: 100vh;
+}
+.main{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    font-family:monospace;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.title h1{
+    text-align: center;
+    display: inline;
+}
+th{
+    color: #fff;
+    line-height: 50px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    text-align: center;
+}
+td{
+    color: #fff;
+    line-height: 50px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    width: 20px;
+}
+p{
+    line-height: 20px;
+    margin-left: 20px;
+}
