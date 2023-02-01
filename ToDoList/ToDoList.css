@@ -1,0 +1,38 @@
+body{
+    background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+    background-size: 25px 25px; 
+    font-family: 'Gochi Hand', cursive;
+}
+
+input{
+    background-color:transparent;
+    border: solid 1px transparent;
+    border-bottom: dashed 3px #a39bd2;
+    padding: 5px;
+}
+h1{
+    background-color: #a39bd260;
+    width: fit-content;
+}
+li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+#todoItem{
+    text-align: center;
+    font-weight: bolder;
+}
+.line{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: 2px;
+    background-color: #a39bd2;
+    width: 50%;
+}
+[type='checkbox']:checked ~ .line{
+    display: block;
+}
