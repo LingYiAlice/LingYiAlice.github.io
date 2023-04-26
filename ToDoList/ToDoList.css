@@ -36,3 +36,11 @@ li{
 [type='checkbox']:checked ~ .line{
     display: block;
 }
+@media screen and (max-width:768px){
+    li{
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width:768px){
+    
+}
