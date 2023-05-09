@@ -15,32 +15,41 @@ h1{
     width: fit-content;
 }
 li{
+    margin-top: 15px;
     position: relative;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
-#todoItem{
+input[id*="todoItem"] 
+{
     text-align: center;
     font-weight: bolder;
+    line-height: inherit;
 }
 .line{
     display: none;
     position: absolute;
     top: 50%;
     left: 5%;
-    height: 2px;
     background-color: #a39bd2;
-    width: 50%;
+    width: 180px;
+    height: 2px;
 }
 [type='checkbox']:checked ~ .line{
     display: block;
 }
-@media screen and (max-width:768px){
-    li{
-        margin-top: 10px;
+@media screen and (max-width:767px){
+    .line{
+        position: absolute;
+        top: 50%;
+        left: 3%;
     }
 }
-@media screen and (min-width:768px){
-    
+@media screen and (min-width:992px) and (max-width:1200px){
+    .line{
+        position: absolute;
+        top: 50%;
+        left: 3%;
+    }
 }

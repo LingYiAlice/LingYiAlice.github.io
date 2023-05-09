@@ -1,0 +1,29 @@
+i {
+    font-size: 48px;
+}
+/* 每一個有box-id屬性的 */
+[box-id]{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    border: 1px dashed #fc0;
+}
+[box-id] p{
+    margin: 0;
+}
+
+[box-id].active{
+    border: 3px solid #00000020;
+    box-shadow: 0 0 20px #00000050;
+    transition: 0s;
+}
+
+#msg{
+    font-size: 36px;
+    text-align: center;
+}
+.btnArea button{
+    height: fit-content;
+}
