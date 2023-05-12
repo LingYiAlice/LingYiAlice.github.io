@@ -7,7 +7,6 @@ const listArea = document.querySelector('.list')
 //宣告
 let todoKey ='todoItem' //localStorage-Key
 let todoList = []       //localStorage
-let clickCount = 0      //計算點擊次數
 
 //function
 function renderData() {
@@ -118,7 +117,6 @@ function editTodoItem(inputItem){
 
     if(inputItem.value.trim() == ""){
         alert("要變更的待辦事項還沒輸入喔!");
-        return clickCount--
     }
     else{
     //console.log(inputItem.dataset.num)
