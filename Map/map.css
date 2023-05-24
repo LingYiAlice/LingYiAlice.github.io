@@ -1,0 +1,58 @@
+.container > .row{
+    height: 100vh;
+}
+#map{
+    height: 80vh;
+}
+.leaflet-popup-content p{
+    margin: 0;
+    font-size: 14px;
+}
+
+#departure:checked + label,
+#arrival:checked + label
+{
+    background-color: #ddd;
+
+}
+#departure:checked ~ #departureTimetable,
+#arrival:checked ~ #arrivalTimetable{
+    display: block;
+}
+#departureTimetable,
+#arrivalTimetable{
+    display: none;
+    height: 50vh;
+    overflow: auto
+}
+#departureTimetable thead,
+#arrivalTimetable thead{
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+.info li{
+    list-style:none;
+    padding:0; 
+    margin:0;
+}
+h1{
+    position: relative;
+}
+strong+p{
+    font-size: 14px;
+    position:absolute;
+    top:5%;
+    left: 300px;
+}
+.tooltip-inner{
+    text-align: start;
+}
+.over{
+    height: 100vh;
+}
+@media screen and (min-width:768px){
+    #map{
+        height: 100%;
+    }
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAP</title>
+    <link rel="icon" href="./airplane.ico" type="image/x-icon" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="./map.css">
+</head>
+<body>
+
+
+        <div class="container" id="">
+            <div class="row py-5">
+                <!-- map -->
+                <div class="col-12 col-md-6">
+                    <div id="map"></div>
+                </div>
+                <!-- data -->
+                <div class="info col-12 col-md-6">
+                    <!-- title -->
+                    <div>
+                        <label for="airport"><b>選擇機場</b></label>
+                        <select id="airport" class="form-control">
+                            <!-- option -->
+                        </select>
+                    </div>
+                    <!-- info -->
+                    <div>
+                        <h1 class="w-100 text-center mt-3">
+                            <strong class="text-center"></strong>
+                            <br>航班資訊
+                        </h1>
+                        <input type="radio" name="btn" class="btn-check" id="departure" checked>
+                        <label class="btn border-0" for="departure">離站Departure</label>
+                        <input type="radio" name="btn" class="btn-check" id="arrival" onchange="timeTableData()">
+                        <label class="btn border-0" for="arrival">到站Arrival</label>
+                        <div id="departureTimetable">
+                            <table class="table table-striped table-hover " >
+                                <thead>
+                                    <tr>
+                                        <th>航班</th>
+                                        <th>表訂起飛時間</th>
+                                        <th>預定/實際起飛時間</th>
+                                        <th>目的地</th>
+                                        <th>航廈</th>
+                                        <th>登機門</th>
+                                        <th>狀態</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="arrivalTimetable">
+                            <table class="table table-striped table-hover" >
+                                <thead>
+                                    <tr>
+                                        <th>航班</th>
+                                        <th>表訂到達時間</th>
+                                        <th>預定/實際到達時間</th>
+                                        <th>出發地</th>
+                                        <th>航廈</th>
+                                        <th>狀態</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="over d-none justify-content-center align-items-center">
+            <p class="fs-1">!今日瀏覽次數已達限制!</p>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- 引入 jQuery 和 Bootstrap 的 JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- TDX -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="./map.js"></script>
+   
+    
+</body>
+</html>
