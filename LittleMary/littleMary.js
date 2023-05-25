@@ -82,7 +82,7 @@
             extraBricks.classList.remove('d-none')
             extraBricks.classList.add('d-flex')
             btn = document.createElement('button')
-            btn.innerText = '離島請選得'
+            btn.innerText = '離島請選擇'
             extraBtnArea.appendChild(btn)
             extraBtnArea.classList.add('d-flex','justify-content-center')
             btn.classList.add('btn','btn-outline-primary')

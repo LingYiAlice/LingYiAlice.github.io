@@ -73,7 +73,6 @@ let page, price
 //function
 function changeProduct(btn){
     page = appleProducts.find( x => x.name == btn.dataset.page)
-    // console.log(page)
     //title
     title.innerHTML = `<h1>購買 ${btn.innerText}</h1><p">NT$${page['price']}起</p>`
 
@@ -101,7 +100,6 @@ function changeProduct(btn){
 
 
 function createButton(){
-    console.log(page)
     //colorArea:Btn
     page.colorList.forEach( el => {
         let btn = createElement('button', '')
@@ -152,7 +150,7 @@ function createButton(){
             networkArea.appendChild(btn)
         })
     }
-
+    show.innerText = ''
     getPrice()
 }
 
