@@ -160,3 +160,21 @@ section:nth-of-type(even) .yt{
     left: -880px;
     top: 350px;
 }
+#home{
+    font-size: 18px;
+    border: 1px solid #aaa;
+    padding: 8px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+}
+#home i{
+    color: #888;
+}
+#home:hover{
+    background-color: #eee8;
+}
+#home:hover i{
+    font-size: 22px;
+}

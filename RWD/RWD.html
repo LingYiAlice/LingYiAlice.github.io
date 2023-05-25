@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RWD排版</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/RWD/normalize.css">
     <style>
         :root{
@@ -30,6 +31,24 @@
         }
         .text h3{
             font-size: 25px;
+        }
+        #home{
+            font-size: 18px;
+            border: 1px solid #aaa;
+            padding: 8px;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 15px;
+            right: 30px;
+        }
+        #home i{
+            color: #888;
+        }
+        #home:hover{
+            background-color: #eee8;
+        }
+        #home:hover i{
+            font-size: 22px;
         }
         @media screen and (min-width:768px) {
             .content{
@@ -120,6 +139,10 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi iure omnis quibusdam laborum officia fuga est ratione maiores id minus accusamus, quasi similique earum.</p>
             </div>
         </div>
+    </div>
+
+    <div id="home">
+        <a href="/index.html"><i class="fa-solid fa-house"></i></a>
     </div>
 </body>
 </html>

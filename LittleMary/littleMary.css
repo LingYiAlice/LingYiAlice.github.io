@@ -29,4 +29,22 @@ i {
 }
 .btnArea button{
     height: fit-content;
+}        
+#home{
+    border: 1px solid #aaa;
+    padding: 8px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+}
+#home i{
+    font-size: 18px;
+    color: #888;
+}
+#home:hover{
+    background-color: #eee8;
+}
+#home:hover i{
+    font-size: 22px;
 }

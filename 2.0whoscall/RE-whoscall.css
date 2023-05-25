@@ -1,4 +1,6 @@
-a{transition: 0.3s;}
+a{
+    transition: 0.3s;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -361,4 +363,22 @@ input[type=submit]{
 select{
     background-color: rgb(39, 47, 55);
     color: #fff;
+}
+#home{
+    font-size: 18px;
+    border: 1px solid #aaa;
+    padding: 8px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+}
+#home i{
+    color: #888;
+}
+#home:hover{
+    background-color: #eee8;
+}
+#home:hover i{
+    font-size: 22px;
 }

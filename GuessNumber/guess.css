@@ -67,3 +67,18 @@ input{
     padding: 5px 10px;
     border-radius: 50%;
 }
+#home{
+    font-size: 18px;
+    border: 1px solid #aaa;
+    padding: 8px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+}
+#home i{
+    color: #888;
+}
+#home:hover i{
+    font-size: 22px;
+}
