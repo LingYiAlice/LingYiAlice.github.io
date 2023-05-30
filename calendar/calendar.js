@@ -168,31 +168,31 @@ window.onload = function () {
 }
 
 
-//eye DOM
-const eye = document.getElementById('eye')
+//eyes DOM
+const eyes = document.getElementById('eyes')
 $(window).mousemove(function (evt) {
     var x = evt.pageX;
     var y = evt.pageY;
 // console.log(x + "," + y);
 //中
     if (x == $(window).width() / 2 && y < $(window).height() / 2) {
-    $("#eye").attr("src", "./eye/m.jpg");
+    $("#eyes").attr("src", "./eyes/m.jpg");
     }
 //上半
     if (x < $(window).width() / 2  && y < $(window).height() / 2) {
-    $("#eye").attr("src", "./eye/左上.jpg");
+    $("#eyes").attr("src", "./eyes/左上.jpg");
     }
 
     if (x > $(window).width() / 2  && y < $(window).height() / 2) {
-    $("#eye").attr("src", "./eye/右上.jpg");
+    $("#eyes").attr("src", "./eyes/右上.jpg");
     }
 //下半
     if (x > $(window).width() / 2  && y > $(window).height() / 2) {
-    $("#eye").attr("src", "./eye/右下.jpg");
+    $("#eyes").attr("src", "./eyes/右下.jpg");
     }
 
     if (x < $(window).width() / 2  && y > $(window).height() / 2) {
-    $("#eye").attr("src", "./eye/左下.jpg");
+    $("#eyes").attr("src", "./eyes/左下.jpg");
     }
 }); 
 
